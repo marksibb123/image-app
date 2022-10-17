@@ -5,7 +5,6 @@ import ImageAfter from '../assets/rockAfter.jpg'
 
 function ImageViewer() {
 
-  
     return (
       <Segment>
         <b><p>Sadly, this does not automatically run the python script as planned, so here is an example with the Rock instead.</p>
