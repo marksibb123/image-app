@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Simplified Image App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application was intended to make drawing/painting easier by making complex reference images simple.
 
-## Available Scripts
+To get the desired result, a React application is used to fetch the desired image from Pexels API, and a Python script using various image filtering methods. 
 
-In the project directory, you can run:
+This produces an image that converts complex gradients of tones into simple blocks of tones.
 
-### `npm start`
+Images can be fetched through the app from 'Pexels' database.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The issues...
+As nice as the above sounds, I was not being able to integrate the script with the React application. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The script works as planned with image hardcoded in, while running a Jupyter Notebook. 
 
-### `npm test`
+And the React app fetches and selects the desired image, but using the desired image in the Python script within the browser was not possible in the time frame.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The quickest method to achieve this was to use 'opencv.js', this would allow me to convert the Python methods into Javacript and run within the browser. Although this was causing issues on app start.
 
-### `npm run build`
+My desired apporach would be to create a Flask API and keep the script in Python, although time contraints prevented this.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### To start React
+To start the React application: run `npm i` followed by `npm start` in the projects directory.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### To start Jupyter (if this is of any interest)
+If you want to run the Python script locally, this can be started running `jupyter-notebook` in the projects directory (will need to install Jupyter to do this).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Upon running the the script, you will be prompted to install the imports if they are not already in your environment. 
 
-### `npm run eject`
+This will be done using `pip install <package>`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Comments have been added throughout the 'simplifyScript.ipynb' explaining the process used and a screen grab of the Python scripts output is integrated in the React application. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Open sourced tools used 
+- Semantic UI React for the components 
+- Jupyter Notebook for testing of the script
+- Pexels API
