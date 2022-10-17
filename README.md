@@ -8,16 +8,14 @@ This produces an image that converts complex gradients of tones into simple bloc
 
 Images can be fetched through the app from 'Pexels' database.
 
-### The issues...
+### The issue
 As nice as the above sounds, I was not being able to integrate the script with the React application. 
 
 The script works as planned with image hardcoded in, while running a Jupyter Notebook. 
 
 And the React app fetches and selects the desired image, but using the desired image in the Python script within the browser was not possible in the time frame.
 
-The quickest method to achieve this was to use 'opencv.js', this would allow me to convert the Python methods into Javacript and run within the browser. Although this was causing issues on app start.
-
-My desired apporach would be to create a Flask API and keep the script in Python, although time contraints prevented this.
+My desired apporach would be to create a Flask API to perform this integration, although time contraints prevented this.
 
 ### To start React
 To start the React application: run `npm i` followed by `npm start` in the projects directory.
